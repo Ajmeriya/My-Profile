@@ -55,22 +55,23 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    { name: 'Java', level: 85, icon: Code, color: 'from-orange-400 to-orange-600', bgColor: 'bg-orange-500/20' },
-    { name: 'Spring Boot', level: 80, icon: Globe, color: 'from-green-400 to-green-600', bgColor: 'bg-green-500/20' },
-    { name: 'JavaScript', level: 82, icon: Terminal, color: 'from-yellow-400 to-yellow-600', bgColor: 'bg-yellow-500/20' },
-    { name: 'React.js', level: 82, icon: Code, color: 'from-blue-400 to-blue-600', bgColor: 'bg-blue-500/20' },
-    { name: 'HTML/CSS', level: 88, icon: Globe, color: 'from-red-400 to-red-600', bgColor: 'bg-red-500/20' },
-    { name: 'C++', level: 75, icon: Code, color: 'from-blue-500 to-purple-600', bgColor: 'bg-blue-600/20' },
-    { name: 'Python', level: 70, icon: Code, color: 'from-blue-400 to-yellow-400', bgColor: 'bg-blue-400/20' },
-    { name: 'MERN Stack', level: 78, icon: Database, color: 'from-green-400 to-cyan-400', bgColor: 'bg-green-600/20' },
-    { name: 'MongoDB', level: 80, icon: Database, color: 'from-green-500 to-green-700', bgColor: 'bg-green-700/20' },
-    { name: 'MySQL', level: 85, icon: Database, color: 'from-blue-500 to-blue-700', bgColor: 'bg-blue-700/20' },
-    { name: 'PostgreSQL', level: 75, icon: Database, color: 'from-indigo-500 to-indigo-700', bgColor: 'bg-indigo-600/20' },
-    { name: 'Docker', level: 65, icon: Globe, color: 'from-blue-400 to-blue-700', bgColor: 'bg-blue-600/20' },
-    { name: 'AWS', level: 70, icon: Globe, color: 'from-orange-500 to-orange-700', bgColor: 'bg-orange-600/20' },
-    { name: 'Git/GitHub', level: 85, icon: Code, color: 'from-gray-500 to-gray-700', bgColor: 'bg-gray-600/20' },
-    { name: 'REST APIs', level: 82, icon: Globe, color: 'from-purple-400 to-purple-600', bgColor: 'bg-purple-500/20' },
-    { name: 'DSA', level: 88, icon: Code, color: 'from-purple-500 to-purple-700', bgColor: 'bg-purple-600/20' }
+    { name: 'Java', icon: Code, color: 'from-orange-400 to-orange-600', bg: 'bg-orange-500/10' },
+    { name: 'Spring Boot', icon: Globe, color: 'from-green-400 to-green-600', bg: 'bg-green-500/10' },
+    { name: 'React.js', icon: Code, color: 'from-blue-400 to-cyan-500', bg: 'bg-blue-500/10' },
+    { name: 'JavaScript', icon: Terminal, color: 'from-yellow-400 to-yellow-600', bg: 'bg-yellow-500/10' },
+    { name: 'Node.js', icon: Terminal, color: 'from-green-500 to-emerald-600', bg: 'bg-green-500/10' },
+    { name: 'MySQL', icon: Database, color: 'from-blue-500 to-blue-700', bg: 'bg-blue-500/10' },
+    { name: 'MongoDB', icon: Database, color: 'from-green-500 to-green-700', bg: 'bg-green-500/10' },
+    { name: 'PostgreSQL', icon: Database, color: 'from-indigo-500 to-indigo-700', bg: 'bg-indigo-500/10' },
+    { name: 'HTML/CSS', icon: Globe, color: 'from-red-400 to-pink-500', bg: 'bg-red-500/10' },
+    { name: 'Tailwind CSS', icon: Globe, color: 'from-cyan-400 to-cyan-600', bg: 'bg-cyan-500/10' },
+    { name: 'C++', icon: Code, color: 'from-blue-500 to-purple-600', bg: 'bg-blue-500/10' },
+    { name: 'Python', icon: Code, color: 'from-blue-400 to-yellow-400', bg: 'bg-blue-500/10' },
+    { name: 'REST APIs', icon: Globe, color: 'from-purple-400 to-purple-600', bg: 'bg-purple-500/10' },
+    { name: 'Git/GitHub', icon: Code, color: 'from-gray-500 to-gray-700', bg: 'bg-gray-500/10' },
+    { name: 'Docker', icon: Globe, color: 'from-blue-400 to-blue-700', bg: 'bg-blue-500/10' },
+    { name: 'AWS', icon: Globe, color: 'from-orange-500 to-orange-700', bg: 'bg-orange-500/10' },
+    { name: 'DSA', icon: Code, color: 'from-purple-500 to-purple-700', bg: 'bg-purple-500/10' }
   ];
 
   const projects = [
@@ -748,88 +749,63 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 sm:py-24 px-4 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <section id="skills" className="py-16 sm:py-20 px-4 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Skills & Technologies
             </h2>
-            <div className="section-divider w-32 h-1 mx-auto mt-4 mb-4"></div>
-            <p className="text-gray-400 text-lg">Technologies I work with</p>
+            <p className="text-gray-400 text-lg">Technologies I work with to build amazing solutions</p>
           </div>
 
-          {/* Auto-scrolling Skills Carousel */}
-          <div className="relative overflow-hidden mb-16">
+          {/* Sliding Skills Carousel */}
+          <div className="relative overflow-hidden">
             <div className="flex space-x-6 animate-scroll">
               {[...skills, ...skills].map((skill, index) => (
                 <div
                   key={`${skill.name}-${index}`}
-                  className="flex-shrink-0 w-32 h-32 glass-effect border border-gray-700/50 rounded-2xl p-4 flex flex-col items-center justify-center hover:border-blue-500/50 transition-all duration-300 group hover:scale-105"
+                  className="flex-shrink-0 w-32 h-32 glass-effect border border-gray-700/50 rounded-2xl p-4 flex flex-col items-center justify-center hover:border-blue-500/50 transition-all duration-300 group hover:scale-110"
                 >
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <skill.icon size={24} className="text-white" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white text-center leading-tight">{skill.name}</h3>
+                  <h4 className="text-sm font-semibold text-white text-center leading-tight">{skill.name}</h4>
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Skills Grid with Progress Bars */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skill, index) => (
-              <div
-                key={skill.name}
-                className="skill-card-enhanced glass-effect border border-gray-700/50 p-6 rounded-2xl hover:border-blue-500/50 group card-hover relative overflow-hidden"
-              >
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  <div className="flex items-center mb-5">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${skill.color} mr-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                      <skill.icon size={24} className="text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{skill.name}</h3>
-                      <p className="text-xs text-gray-400 mt-1">{skill.level}% proficiency</p>
-                    </div>
-                  </div>
-                  <div className="w-full bg-gray-800/50 rounded-full h-2.5 overflow-hidden">
-                    <div
-                      className={`h-full rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out shadow-lg`}
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 sm:py-24 px-4 relative">
+      <section id="projects" className="py-12 sm:py-16 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent"></div>
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Featured Projects
             </h2>
-            <div className="section-divider w-32 h-1 mx-auto mt-4 mb-4"></div>
-            <p className="text-gray-400 text-lg">Some of my recent work and contributions</p>
+            <div className="section-divider w-24 h-1 mx-auto mt-3 mb-3"></div>
+            <p className="text-gray-400">Some of my recent work and contributions</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="group relative project-card-enhanced card-hover glass-effect border border-gray-700/50 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                className="group relative project-card-enhanced card-hover glass-effect border border-gray-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                 
-                <div className="relative overflow-hidden h-52">
+                <div className="relative overflow-hidden h-40">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -837,46 +813,46 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent"></div>
                   {project.status && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-2 rounded-full text-xs font-bold shadow-xl backdrop-blur-sm">
+                    <div className="absolute top-3 right-3 bg-gradient-to-r from-green-500 to-emerald-500 px-3 py-1 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm">
                       {project.status}
                     </div>
                   )}
                 </div>
-                <div className="relative z-10 p-6">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-2">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                    <span className="text-xs text-gray-400 bg-gray-800/70 backdrop-blur-sm px-3 py-1.5 rounded-full flex-shrink-0 border border-gray-700/50">{project.date}</span>
+                <div className="relative z-10 p-4">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 gap-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                    <span className="text-xs text-gray-400 bg-gray-800/70 backdrop-blur-sm px-2 py-1 rounded-full flex-shrink-0 border border-gray-700/50">{project.date}</span>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-5">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <p className="text-gray-300 text-xs leading-relaxed mb-3 line-clamp-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-blue-500/10 text-blue-300 border border-blue-500/30 px-3 py-1.5 rounded-full text-xs font-medium hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
+                        className="bg-blue-500/10 text-blue-300 border border-blue-500/30 px-2 py-1 rounded-full text-xs font-medium hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4 pt-5 border-t border-gray-700/50">
+                  <div className="flex gap-3 pt-3 border-t border-gray-700/50">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors group/link font-medium hover:gap-3"
+                      className="flex items-center gap-1.5 text-gray-300 hover:text-blue-400 transition-colors group/link font-medium text-xs"
                     >
-                      <Github size={18} className="group-hover/link:scale-110 transition-transform" />
-                      <span className="text-sm">Code</span>
+                      <Github size={16} className="group-hover/link:scale-110 transition-transform" />
+                      <span>Code</span>
                     </a>
                     {project.demo !== '#' && (
                       <a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors group/link font-medium hover:gap-3"
+                        className="flex items-center gap-1.5 text-gray-300 hover:text-blue-400 transition-colors group/link font-medium text-xs"
                       >
-                        <ExternalLink size={18} className="group-hover/link:scale-110 transition-transform" />
-                        <span className="text-sm">Demo</span>
+                        <ExternalLink size={16} className="group-hover/link:scale-110 transition-transform" />
+                        <span>Demo</span>
                       </a>
                     )}
                   </div>
@@ -888,35 +864,35 @@ const Portfolio = () => {
       </section>
 
       {/* Achievements Section */}
-      <section id="achievements" className="py-20 sm:py-24 px-4 relative overflow-hidden">
+      <section id="achievements" className="py-12 sm:py-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/30 to-transparent"></div>
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Achievements & Certifications
             </h2>
-            <div className="section-divider w-32 h-1 mx-auto mt-4 mb-4"></div>
-            <p className="text-gray-400 text-lg">Recognition and milestones in my journey</p>
+            <div className="section-divider w-24 h-1 mx-auto mt-3 mb-3"></div>
+            <p className="text-gray-400">Recognition and milestones in my journey</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group relative glass-effect border border-gray-700/50 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 card-hover overflow-hidden"
+                className="group relative glass-effect border border-gray-700/50 rounded-xl p-4 hover:border-blue-500/50 transition-all duration-300 card-hover overflow-hidden"
               >
                 {/* Gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
                 
                 <div className="relative z-10">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${achievement.color} shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 flex-shrink-0`}>
-                      <achievement.icon size={24} className="text-white" />
+                  <div className="flex items-start gap-3">
+                    <div className={`p-3 rounded-lg bg-gradient-to-r ${achievement.color} shadow-md group-hover:scale-110 transition-all duration-300 flex-shrink-0`}>
+                      <achievement.icon size={20} className="text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{achievement.title}</h3>
-                      <p className="text-sm text-gray-400 mb-3">{achievement.issuer}</p>
-                      <span className="inline-block text-xs font-medium text-gray-300 bg-gray-800/50 px-3 py-1.5 rounded-full border border-gray-700/50">
+                      <h3 className="text-base font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">{achievement.title}</h3>
+                      <p className="text-xs text-gray-400 mb-2">{achievement.issuer}</p>
+                      <span className="inline-block text-xs font-medium text-gray-300 bg-gray-800/50 px-2 py-1 rounded-full border border-gray-700/50">
                         {achievement.year}
                       </span>
                     </div>
@@ -929,120 +905,120 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 sm:py-24 px-4 relative overflow-hidden">
+      <section id="contact" className="py-12 sm:py-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Get In Touch
             </h2>
-            <div className="section-divider w-32 h-1 mx-auto mt-4 mb-4"></div>
-            <p className="text-gray-400 text-lg">Let's connect and work together on something amazing</p>
+            <div className="section-divider w-24 h-1 mx-auto mt-3 mb-3"></div>
+            <p className="text-gray-400">Let's connect and work together on something amazing</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {/* Contact Info */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white mb-4">Let's Connect</h3>
               
               <a 
                 href="mailto:ajmeriyaharsh324@gmail.com"
-                className="group flex items-center gap-5 p-6 glass-effect rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 card-hover"
+                className="group flex items-center gap-4 p-4 glass-effect rounded-xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 card-hover"
               >
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                  <Mail size={24} className="text-white" />
+                <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-lg flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                  <Mail size={20} className="text-white" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-gray-400 text-xs mb-1 uppercase tracking-wider">Email</p>
-                  <p className="text-white font-semibold text-base break-all group-hover:text-blue-400 transition-colors">ajmeriyaharsh324@gmail.com</p>
+                  <p className="text-white font-semibold text-sm break-all group-hover:text-blue-400 transition-colors">ajmeriyaharsh324@gmail.com</p>
                 </div>
               </a>
 
               <a 
                 href="tel:+918200877556"
-                className="group flex items-center gap-5 p-6 glass-effect rounded-2xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 card-hover"
+                className="group flex items-center gap-4 p-4 glass-effect rounded-xl border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 card-hover"
               >
-                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
-                  <Phone size={24} className="text-white" />
+                <div className="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-lg flex-shrink-0 shadow-md group-hover:scale-110 transition-transform">
+                  <Phone size={20} className="text-white" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs mb-1 uppercase tracking-wider">Phone</p>
-                  <p className="text-white font-semibold text-base group-hover:text-green-400 transition-colors">+91-8200877556</p>
+                  <p className="text-white font-semibold text-sm group-hover:text-green-400 transition-colors">+91-8200877556</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-5 p-6 glass-effect rounded-2xl border border-gray-700/50">
-                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-xl flex-shrink-0 shadow-lg">
-                  <MapPin size={24} className="text-white" />
+              <div className="flex items-center gap-4 p-4 glass-effect rounded-xl border border-gray-700/50">
+                <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-lg flex-shrink-0 shadow-md">
+                  <MapPin size={20} className="text-white" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs mb-1 uppercase tracking-wider">Location</p>
-                  <p className="text-white font-semibold text-base">Jam Khambhaliya, Gujarat, India</p>
+                  <p className="text-white font-semibold text-sm">Jam Khambhaliya, Gujarat, India</p>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="pt-4">
-                <p className="text-gray-400 text-sm mb-4">Follow me on</p>
-                <div className="flex gap-3">
+              <div className="pt-2">
+                <p className="text-gray-400 text-xs mb-3">Follow me on</p>
+                <div className="flex gap-2">
                   <a 
                     href="https://github.com/Ajmeriya" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group glass-effect hover:bg-gray-800/50 p-4 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-gray-600 hover:scale-110"
+                    className="group glass-effect hover:bg-gray-800/50 p-3 rounded-lg transition-all duration-300 border border-gray-700/50 hover:border-gray-600 hover:scale-110"
                   >
-                    <Github size={24} className="text-gray-300 group-hover:text-white transition-colors" />
+                    <Github size={20} className="text-gray-300 group-hover:text-white transition-colors" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/harsh-ajmeriya-985b17314"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group glass-effect hover:bg-blue-500/10 p-4 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50 hover:scale-110"
+                    className="group glass-effect hover:bg-blue-500/10 p-3 rounded-lg transition-all duration-300 border border-gray-700/50 hover:border-blue-500/50 hover:scale-110"
                   >
-                    <Linkedin size={24} className="text-gray-300 group-hover:text-blue-400 transition-colors" />
+                    <Linkedin size={20} className="text-gray-300 group-hover:text-blue-400 transition-colors" />
                   </a>
                   <a 
                     href="mailto:ajmeriyaharsh324@gmail.com"
-                    className="group glass-effect hover:bg-purple-500/10 p-4 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-purple-500/50 hover:scale-110"
+                    className="group glass-effect hover:bg-purple-500/10 p-3 rounded-lg transition-all duration-300 border border-gray-700/50 hover:border-purple-500/50 hover:scale-110"
                   >
-                    <Mail size={24} className="text-gray-300 group-hover:text-purple-400 transition-colors" />
+                    <Mail size={20} className="text-gray-300 group-hover:text-purple-400 transition-colors" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <form className="glass-effect p-8 rounded-2xl border border-gray-700/50 shadow-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-              <div className="space-y-5">
+            <form className="glass-effect p-6 rounded-xl border border-gray-700/50 shadow-xl">
+              <h3 className="text-xl font-bold text-white mb-4">Send a Message</h3>
+              <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                  <label className="block text-xs font-medium text-gray-300 mb-1.5">Your Name</label>
                   <input
                     type="text"
                     placeholder="John Doe"
-                    className="w-full glass-effect border border-gray-700/50 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all"
+                    className="w-full glass-effect border border-gray-700/50 rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                  <label className="block text-xs font-medium text-gray-300 mb-1.5">Your Email</label>
                   <input
                     type="email"
                     placeholder="john@example.com"
-                    className="w-full glass-effect border border-gray-700/50 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all"
+                    className="w-full glass-effect border border-gray-700/50 rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                  <label className="block text-xs font-medium text-gray-300 mb-1.5">Your Message</label>
                   <textarea
-                    rows={5}
+                    rows={4}
                     placeholder="Hi, I'd like to discuss..."
-                    className="w-full glass-effect border border-gray-700/50 rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all resize-none"
+                    className="w-full glass-effect border border-gray-700/50 rounded-lg px-3 py-2.5 text-sm text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all resize-none"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="btn-primary w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl text-white"
+                  className="btn-primary w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-xl text-white"
                 >
                   Send Message
                 </button>
@@ -1113,7 +1089,7 @@ const Portfolio = () => {
         }
         
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 5s linear infinite;
         }
         
         .animate-scroll:hover {
